@@ -1,70 +1,377 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <link href="./bootstrap.min.css" rel="stylesheet">
+    <script src="./bootstrap.bundle.min.js"></script>
+    <script src="./react.development.js"></script>
+    <script src="./react-dom.development.js"></script>
+    <script src="./babel.min.js"></script>
+    <script src="./popper.js"></script>
+    <script src="./react-router-dom.production.min.js" ></script>
 </head>
+
 <body>
-    <form action="#" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required><br><br>
 
-        <label for="sobrenome">Sobrenome:</label>
-        <input type="text" id="sobrenome" name="sobrenome" required><br><br>
+    <div id="mydiv"></div>
 
-        <label for="data_nascimento">Data de Nascimento:</label>
-        <input type="date" id="data_nascimento" name="data_nascimento" required><br><br>
+    <script type="text/babel">
+        const txtNome = React.createRef();
+        const txtSobrenome = React.createRef();
+        const txtDiaNascimento = React.createRef();
+        const txtMesNascimento  = React.createRef();
+        const txtAnoNascimento = React.createRef();
+        const txtEmail = React.createRef();
+        const txtWhatsapp = React.createRef();
+        const txtEndereco = React.createRef();
+        const txtNumeroEndereco = React.createRef();
+        const txtBairro = React.createRef();
+        const txtCEP = React.createRef();
+        const txtCidade= React.createRef();
+        const txtEstado= React.createRef();
+        const txtCPF = React.createRef();
+        const txtRG = React.createRef();
+        const txtNacionalidade = React.createRef();
+        const txtProfissao = React.createRef();
+        const txtEstadoCivil = React.createRef();
+        const txtSenha = React.createRef();
+        
+        const txt_Nome = (
+        <input
+        type={"text"}
+        id={"txtNome"}
+        ref={txtNome}
+        />
+        );
+        const txt_Sobrenome = (
+        <input
+        type={"text"}
+        id={"txtSobrenome"}
+        ref={txtSobrenome}
+        />
+        );
+        const txt_DiaNascimento = (
+        <input
+        type={"text"}
+        id={"txtDiaNascimento"}
+        ref={txtDiaNascimento}
+        />
+        );
+        const txt_MesNascimento = (
+        <input
+        type={"text"}
+        id={"txtMesNascimento"}
+        ref={txtMesNascimento}
+        />
+        );
+        const txt_AnoNascimento = (
+        <input
+        type={"text"}
+        id={"txtAnoNascimento"}
+        ref={txtAnoNascimento}
+        />
+        );
+        const txt_Email = (
+        <input
+        type={"email"}
+        id={"txtEmail"}
+        ref={txtEmail}
+        />
+        );
+        const txt_Whatsapp = (
+            <input
+        type={"text"}
+        id={"txtWhatsapp"}
+        ref={txtWhatsapp}
+        />
+        );
+        const txt_Endereco = (
+        <input
+        type={"text"}
+        id={"txtEndereco"}
+        ref={txtEndereco}
+        />
+        );
+        const txt_NumeroEndereco = (
+        <input
+        type={"text"}
+        id={"txtNumeroEndereco"}
+        />
+        );
+        ref={txtNumeroEndereco}
+        const txt_Bairro = (
+        <input
+        type={"text"}
+        id={"txtBairro"}
+        ref={txtBairro}
+        />
+        );
+        const txt_CEP = (
+        <input
+        type={"text"}
+        id={"txtCEP"}
+        ref={txtCEP}
+        />
+        );
+        const txt_Cidade = (
+        <input
+        type={"text"}
+        id={"txtCidade"}
+        ref={txtCidade}
+        />
+        );
+        const txt_Estado = (
+        <input
+        type={"text"}
+        id={"txtEstado"}
+        ref={txtEstado}
+        />
+        );
+        const txt_CPF = (
+        <input
+        type={"text"}
+        id={"txtCPF"}
+        ref={txtCPF}
+        />
+        );
+        const txt_RG = (
+        <input
+        type={"text"}
+        id={"txtRG"}
+        ref={txtRG}
+        />
+        );
+        const txt_Nacionalidade= (
+        <input
+        type={"text"}
+        id={"txtNacionalidade"}
+        ref={txtNacionalidade}
+        />
+        );
+        const txt_Profissao = (
+        <input
+        type={"text"}
+        id={"txtProfissao"}
+        ref={txtProfissao}
+        />
+        );
+        const txt_EstadoCivil = (
+        <input
+        type={"text"}
+        id={"txtEstadoCivil"}
+        ref={txtEstadoCivil}
+        />
+        );
+        const txt_Senha = (
+        <input
+        type={"text"}
+        id={"txtSenha"}
+        ref={txtSenha}
+        />
+        );
+        
+        const lblNome = React.createRef();
+        const lblSobrenome = React.createRef();
+        const lblDiaNascimento = React.createRef();
+        const lblMesNascimento  = React.createRef();
+        const lblAnoNascimento = React.createRef();
+        const lblEmail = React.createRef();
+        const lblWhatsapp = React.createRef();
+        const lblEndereco = React.createRef();
+        const lblNumeroEndereco = React.createRef();
+        const lblBairro = React.createRef();
+        const lblCEP = React.createRef();
+        const lblCidade= React.createRef();
+        const lblEstado= React.createRef();
+        const lblCPF = React.createRef();
+        const lblRG = React.createRef();
+        const lblNacionalidade = React.createRef();
+        const lblProfissao = React.createRef();
+        const lblEstadoCivil = React.createRef();
+        const lblSenha = React.createRef();
 
-        <label for="nacionalidade">Nacionalidade:</label>
-        <input type="text" id="nacionalidade" name="nacionalidade" required><br><br>
+        const lbl_Nome = (
+        <label
+        id={"lblNome"}
+        ref={lblNome}
+        >Nome</label>
+        );
+        const lbl_Sobrenome = (
+        <label
+        id={"lblSobrenome"}
+        ref={lblSobrenome}
+        >Sobrenome</label>
+        );
+    const lbl_DiaNascimento = (
+        <label
+        id={"lblDiaNascimento"}
+        ref={lblDiaNascimento}
+        >Dia Nascimento</label>
+        );
+        const lbl_MesNascimento = (
+        <label
+        id={"lblMesNascimento"}
+        ref={lblMesNascimento}
+        >Mês Nascimento</label>
+        );
+         const lbl_AnoNascimento = (
+        <label
+        id={"lblAnoNascimento"}
+        ref={lblAnoNascimento}
+        >Ano Nascimento</label>
+        );
+        const lbl_Email = (
+        <label
+        id={"lblEmail"}
+        ref={lblEmail}
+        >Email</label>
+        );
+        const lbl_Whatsapp = (
+        <label
+        id={"lblWhatsapp"}
+        ref={lblWhatsapp}
+        >Whatsapp</label>
+        );
+        const lbl_Endereco = (
+        <label
+        id={"lblEndereco"}
+        ref={lblEndereco}
+        >Endereco</label>
+        );
+        const lbl_NumeroEndereco = (
+        <label
+        id={"lblNumeroEndereco"}
+        ref={lblNumeroEndereco}
+        > Número</label>
+        );
+        const lbl_Bairro = (
+        <label
+        id={"lblBairro"}
+        ref={lblBairro}
+        >Bairro</label>
+        );
+        const lbl_CEP = (
+        <label
+        id={"lblCEP"}
+        ref={lblCEP}
+        >CEP</label>
+        );
+        const lbl_Cidade = (
+        <label
+        id={"lblCidade"}
+        ref={lblCidade}
+        >Cidade</label>
+        );
+        const lbl_Estado = (
+        <label
+        id={"lblEstado"}
+        ref={lblEstado}
+        >Estado</label>
+        );
+        const lbl_CPF = (
+        <label
+        id={"lblCPF"}
+        ref={lblCPF}
+        >CPF</label>
+        );
+        const lbl_RG = (
+        <label
+        id={"lblRG"}
+        ref={lblRG}
+        >RG</label>
+        );
+        const lbl_Nacionalidade = (
+        <label
+        id={"lblNacionalidade"}
+        ref={lblNacionalidade}
+        >Nacionalidade</label>
+        );
+        const lbl_Profissao = (
+        <label
+        id={"lblProfissao"}
+        ref={lblProfissao}
+        >Profissao</label>
+        );
+        const lbl_EstadoCivil = (
+        <label
+        id={"lblEstadoCivil"}
+        ref={lblEstadoCivil}
+        >EstadoCivil</label>
+        );
+        const lbl_Senha = (
+        <label
+        id={"lblSenha"}
+        ref={lblSenha}
+        >Senha</label>
+        );
+        const quebra_Linha = <br />;
+var formulario = [
 
-        <label for="estado_civil">Estado Civil:</label>
-        <input type="text" id="estado_civil" name="estado_civil" required><br><br>
+lbl_Nome,
+txt_Nome,
+quebra_Linha,
+lbl_Sobrenome,
+txt_Sobrenome,
+quebra_Linha,
+lbl_DiaNascimento,
+txt_DiaNascimento,
+quebra_Linha,
+lbl_MesNascimento,
+txt_MesNascimento,
+quebra_Linha,
+lbl_AnoNascimento,
+quebra_Linha,
+txt_AnoNascimento,
+lbl_Email,
+txt_Email,
+quebra_Linha,
+lbl_Whatsapp,
+txt_Whatsapp,
+quebra_Linha,
+lbl_Endereco,
+txt_Endereco,
+quebra_Linha,
+lbl_NumeroEndereco,
+txt_NumeroEndereco,
+quebra_Linha,
+lbl_Bairro,
+txt_Bairro,
+lbl_CEP,
+quebra_Linha,
+txt_CEP,
+quebra_Linha,
+lbl_Cidade,
+txt_Cidade,
+quebra_Linha,
+lbl_Estado,
+txt_Estado,
+quebra_Linha,
+lbl_CPF,
+txt_CPF,
+quebra_Linha,
+lbl_RG,
+quebra_Linha,
+txt_RG,
+lbl_Nacionalidade,
+txt_Nacionalidade,
+quebra_Linha,
+lbl_Profissao,
+txt_Profissao,
+quebra_Linha,
+lbl_EstadoCivil,
+txt_EstadoCivil,
+quebra_Linha,
+lbl_Senha,
+txt_Senha,
+];
+const container = document.getElementById('mydiv');
+const root = ReactDOM.createRoot(container); root.render(formulario); // renderizar via variável (contém o objeto a ser renderizado)
 
-        <label for="profissao">Profissão:</label>
-        <input type="text" id="profissao" name="profissao" required><br><br>
+        //root.render(< Sesc />); //renderizar via objeto (retornavel de funcão)
+        //root.render(Hello2); //renderizar via variável (contém o objeto a ser renderizado)
+       // root.render(<h1> Teste </h1>); //renderização direto no renderizador 
+    </script>
 
-        <label for="rg">RG:</label>
-        <input type="text" id="rg" name="rg" required><br><br>
-
-        <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" name="cpf" required><br><br>
-
-        <label for="endereco">Endereço:</label>
-        <input type="text" id="endereco" name="endereco" required><br><br>
-
-        <label for="numero_endereco">Número de Endereço:</label>
-        <input type="text" id="numero_endereco" name="numero_endereco" required><br><br>
-
-        <label for="bairro">Bairro:</label>
-        <input type="text" id="bairro" name="bairro" required><br><br>
-
-        <label for="complemento">Complemento:</label>
-        <input type="text" id="complemento" name="complemento"><br><br>
-
-        <label for="cidade">Cidade:</label>
-        <input type="text" id="cidade" name="cidade" required><br><br>
-
-        <label for="estado">Estado:</label>
-        <input type="text" id="estado" name="estado" required><br><br>
-
-        <label for="cep">CEP:</label>
-        <input type="text" id="cep" name="cep" required><br><br>
-
-        <label for="whatsapp">WhatsApp:</label>
-        <input type="tel" id="whatsapp" name="whatsapp" required><br><br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="login">Login:</label>
-        <input type="text" id="login" name="login" required><br><br>
-
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" required><br><br>
-
-        <input type="submit" value="Enviar">
-    </form>
 </body>
+
 </html>
